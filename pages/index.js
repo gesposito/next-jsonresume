@@ -2,45 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 import Head from 'next/head';
 
+const RESUME_URL =
+  'https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json';
+
 export default function Home() {
-  const [data, setData] = useState({
-    meta: {},
-    basics: {
-      name: '',
-      label: '',
-      image: '',
-      summary: '',
-      website: '',
-      email: '',
-      phone: '',
-      location: {
-        address: '',
-        postalCode: '',
-        city: '',
-        countryCode: '',
-        region: ''
-      },
-      profiles: ''
-    },
-    education: [],
-    references: [],
-    skills: [],
-    languages: [],
-    awards: [],
-    publications: [],
-    work: [],
-    volunteer: [],
-    interests: []
-  });
+  const [data, setData] = useState({});
 
   useEffect(async () => {
-    const url =
-      'https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json';
+    const url = RESUME_URL;
     const response = await fetch(url);
     const result = await response.json();
 
     setData(result);
   });
+
+  if (!Object.keys(data).length) {
+    return null;
+  }
 
   const {
     meta, // theme
@@ -637,16 +615,15 @@ export async function getServerSideProps(context) {
   /*
   try {
     const url = `${context.req.headers.origin}/api/resume`;
-    console.log(context.req.headers);
     const response = await fetch(url);
     data = await response.json();
   } catch (e) {
-    console.log('e');
     console.error(e);
   }
   */
 
   return {
-    props: { data } // will be passed to the page component as props
+    // will be passed to the page component as props
+    props: { data }
   };
 }
