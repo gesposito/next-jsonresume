@@ -5,17 +5,7 @@ import Head from "next/head";
 const RESUME_URL =
   "https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json";
 
-export default function Home() {
-  const [data, setData] = useState({});
-
-  useEffect(async () => {
-    const url = RESUME_URL;
-    const response = await fetch(url);
-    const result = await response.json();
-
-    setData(result);
-  });
-
+export default function Home({ data }) {
   if (!Object.keys(data).length) {
     return null;
   }
@@ -598,15 +588,13 @@ export default function Home() {
 
 export async function getServerSideProps(context) {
   let data = {};
-  /*
   try {
-    const url = `${context.req.headers.origin}/api/resume`;
+    const url = `http://${context.req.headers.host}/api/resume`;
     const response = await fetch(url);
     data = await response.json();
   } catch (e) {
     console.error(e);
   }
-  */
 
   return {
     // will be passed to the page component as props
