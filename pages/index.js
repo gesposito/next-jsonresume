@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Head from 'next/head';
+import Head from "next/head";
 
 const RESUME_URL =
-  'https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json';
+  "https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json";
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -31,7 +31,7 @@ export default function Home() {
       email,
       phone,
       location: { address, postalCode, city, countryCode, region },
-      profiles
+      profiles,
     },
     education,
     references,
@@ -41,27 +41,13 @@ export default function Home() {
     publications,
     work,
     volunteer,
-    interests
+    interests,
   } = data;
 
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no"
-        />
         <title>{name}</title>
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic"
-          rel="stylesheet"
-          type="text/css"
-        />
       </Head>
       <div id="resume">
         <header id="header">
@@ -124,7 +110,7 @@ export default function Home() {
               <React.Fragment>
                 <div className="email">
                   <span className="fa fa-envelope" />
-                  <a href={'mailto:' + email}>{email}</a>
+                  <a href={"mailto:" + email}>{email}</a>
                 </div>
               </React.Fragment>
             )}
@@ -147,9 +133,9 @@ export default function Home() {
                         <React.Fragment>
                           <span
                             className={
-                              'network fa fa-' +
+                              "network fa fa-" +
                               item.spaceToDash +
-                              ' ' +
+                              " " +
                               item.spaceToDash
                             }
                           />
@@ -494,7 +480,7 @@ export default function Home() {
                       )}
                       {item.level && (
                         <React.Fragment>
-                          <div className={'level ' + item.toLowerCase}>
+                          <div className={"level " + item.toLowerCase}>
                             <em>{item.level}</em>
                             <div className="bar" />
                           </div>
@@ -624,6 +610,6 @@ export async function getServerSideProps(context) {
 
   return {
     // will be passed to the page component as props
-    props: { data }
+    props: { data },
   };
 }
