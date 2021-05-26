@@ -1,29 +1,29 @@
 import React from "react";
 
-export function Experience({ work }) {
+export function Volunteer({ volunteer }) {
   return (
     <>
-      {!!work?.length && (
+      {!!volunteer?.length && (
         <section className="section">
-          <h2 className="section-title">Experience</h2>
-          <section id="work">
-            {work.map((item, i) => (
+          <h2 className="section-title">Volunteer</h2>
+          <section id="volunteer">
+            {volunteer.map((item, i) => (
               <React.Fragment key={i}>
-                {item.company && (
+                {item.organization && (
                   <header>
-                    <h3 className="name">{item.company}</h3>
+                    <h3 className="company">{item.organization}</h3>
+                    <div className="date">
+                      {item.startDate && (
+                        <span className="startDate">{item.MY}</span>
+                      )}
+                      {item.endDate ? (
+                        <span className="endDate">- {item.MY}</span>
+                      ) : (
+                        <span className="endDate">- Present</span>
+                      )}
+                    </div>
                   </header>
                 )}
-                <div className="date">
-                  {item.startDate && (
-                    <span className="startDate">{item.MY}</span>
-                  )}
-                  {item.endDate ? (
-                    <span className="endDate">- {item.MY}</span>
-                  ) : (
-                    <span className="endDate">- Present</span>
-                  )}
-                </div>
                 <div className="item">
                   {item.position && (
                     <div className="position">{item.position}</div>

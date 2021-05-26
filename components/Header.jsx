@@ -10,12 +10,10 @@ export function Header({ image, name, label }) {
           </div>
         </>
       ) : (
-        <>
-          <div>
-            <h1 className="name">{name}</h1>
-            <h2 className="label">{label}</h2>
-          </div>
-        </>
+        <div>
+          <h1 className="name">{name}</h1>
+          <h2 className="label">{label}</h2>
+        </div>
       )}
     </header>
   );

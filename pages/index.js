@@ -2,20 +2,20 @@ import React from "react";
 
 import Head from "next/head";
 
-import { References } from "./../components/References";
-import { Interests } from "./../components/Interests";
-import { Languages } from "./../components/Languages";
-import { Skills } from "./../components/Skills";
-import { Publications } from "./../components/Publications";
-import { Awards } from "./../components/Awards";
-import { Volunteer } from "./../Volunteer";
-import { Education } from "./../components/Education";
-import { Experience } from "./../components/Experience";
-import { Summary } from "./../components/Summary";
-import { Profiles } from "./../components/Profiles";
-import { Contact } from "./../components/Contact";
-import { Location } from "./../components/Location";
 import { Header } from "./../components/Header";
+import { Location } from "./../components/Location";
+import { Contact } from "./../components/Contact";
+import { Profiles } from "./../components/Profiles";
+import { Summary } from "./../components/Summary";
+import { Experience } from "./../components/Experience";
+import { Education } from "./../components/Education";
+import { Volunteer } from "./../components/Volunteer";
+import { Awards } from "./../components/Awards";
+import { Publications } from "./../components/Publications";
+import { Skills } from "./../components/Skills";
+import { Languages } from "./../components/Languages";
+import { Interests } from "./../components/Interests";
+import { References } from "./../components/References";
 
 export default function Home({ data }) {
   if (!Object.keys(data).length) {
