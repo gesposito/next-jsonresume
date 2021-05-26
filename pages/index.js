@@ -52,7 +52,7 @@ export default function Home({ data }) {
         <title>{name}</title>
       </Head>
 
-      <div id="resume">
+      <section id="resume" className="container mx-auto">
         <Header image={image} name={name} label={label} />
 
         <section id="basics">
@@ -82,7 +82,7 @@ export default function Home({ data }) {
         <Interests interests={interests} />
 
         <References references={references} />
-      </div>
+      </section>
     </>
   );
 }

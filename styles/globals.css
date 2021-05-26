@@ -30,14 +30,6 @@ a:hover {
 /* Layout */
 body {
   background: #f2f2f2;
-  line-height: 1.6;
-  font-size: 13px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#resume {
-  padding: 1rem 0;
-  margin: 1rem auto;
 }
 
 #header {
@@ -351,10 +343,6 @@ h2.section-title {
 *		TABLET
 ****************/
 @media screen and (min-width: 602px) {
-  #resume {
-    width: 550px;
-    margin: 0 auto;
-  }
   section > header > h3 {
     float: left;
   }
@@ -368,14 +356,6 @@ h2.section-title {
 *		LAPTOP
 ****************/
 @media screen and (min-width: 1025px) {
-  #resume {
-    width: 650px;
-    padding: 3em;
-    margin: 3em auto;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-  }
-
   .section {
     display: -webkit-box;
     display: -moz-box;
@@ -404,13 +384,6 @@ h2.section-title {
   h2.section-title {
     line-height: 1.1;
     padding-top: 0;
-  }
-
-  section:not(.section) {
-    width: 34.5em;
-    padding: 0 1em 1em 0;
-    margin-top: 0;
-    border: none;
   }
 
   section p {
