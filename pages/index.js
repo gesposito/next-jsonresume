@@ -32,7 +32,7 @@ export default function Home({ data }) {
       website,
       email,
       phone,
-      location: { address, postalCode, city, countryCode, region },
+      location,
       profiles,
     },
     education,
@@ -56,13 +56,7 @@ export default function Home({ data }) {
         <Header image={image} name={name} label={label} />
 
         <section id="basics">
-          <Location
-            address={address}
-            postalCode={postalCode}
-            city={city}
-            countryCode={countryCode}
-            region={region}
-          />
+          <Location location={location} />
 
           <Contact website={website} email={email} phone={phone} />
 
