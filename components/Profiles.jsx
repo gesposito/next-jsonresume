@@ -8,20 +8,12 @@ export function Profiles({ profiles }) {
           {profiles.map((item, i) => (
             <React.Fragment key={i}>
               <div className="item">
-                {item.network && (
-                  <span
-                    className={
-                      "network fa fa-" +
-                      item.spaceToDash +
-                      " " +
-                      item.spaceToDash
-                    }
-                  />
-                )}
                 {item.username && (
                   <span className="username">
                     {item.url ? (
-                      <span className="url">
+                      <span
+                        className={`url icon ${item.network.toLowerCase()}`}
+                      >
                         <a href={item.url}>{item.username}</a>
                       </span>
                     ) : (

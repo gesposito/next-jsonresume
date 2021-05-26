@@ -35,7 +35,6 @@ export function Education({ education }) {
                   {item.area && <div className="area">{item.area}</div>}
                   {item.gpa && (
                     <div>
-                      <span className="fa fa-graduation-cap" />
                       <span className="gpa"> GPA: {item.gpa}</span>
                     </div>
                   )}

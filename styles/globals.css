@@ -122,7 +122,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -201,7 +201,7 @@ body {
   background: #f2f2f2;
   line-height: 1.6;
   font-size: 13px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #resume {
@@ -265,7 +265,7 @@ section#work,
 
 header::after {
   display: table;
-  content: ' ';
+  content: " ";
   clear: both;
 }
 
@@ -295,9 +295,10 @@ h2.section-title {
   border-bottom: none;
 }
 
-.website::before {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
+.icon::before {
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: text-top;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -305,8 +306,30 @@ h2.section-title {
   text-decoration: none;
   min-width: 1.25em;
   margin-right: 0.25em;
-  text-align: center;
-  content: '\f14c';
+}
+.location::before {
+  content: url("/icons/map-pin.svg");
+}
+.website::before {
+  content: url("/icons/link-2.svg");
+}
+.email::before {
+  content: url("/icons/mail.svg");
+}
+.phone::before {
+  content: url("/icons/phone.svg");
+}
+.github::before {
+  content: url("/icons/github.svg");
+}
+.gitlab::before {
+  content: url("/icons/gitlab.svg");
+}
+.twitter::before {
+  content: url("/icons/twitter.svg");
+}
+.linkedin::before {
+  content: url("/icons/linkedin.svg");
 }
 
 #profiles,
@@ -382,7 +405,7 @@ h2.section-title {
 
 #skills .level .bar::after {
   position: absolute;
-  content: ' ';
+  content: " ";
   top: 0;
   left: 0;
   background: black;
@@ -412,11 +435,6 @@ h2.section-title {
 #references .item {
   padding-left: 1em;
   border-left: 5px solid #eb5f51;
-}
-
-.fa.social {
-  margin-right: 0.25em;
-  font-size: 1.1em;
 }
 
 /* Social Media Brand Colors */
@@ -484,7 +502,7 @@ h2.section-title {
 .stack-overflow::after {
   position: absolute;
   left: 0;
-  content: '\f16c';
+  content: "\f16c";
   color: #f68a1f;
   overflow: hidden;
   height: 40%;
@@ -493,12 +511,6 @@ h2.section-title {
 /******************
 *		HELPER CLASSES
 ******************/
-.fa {
-  min-width: 1.25em;
-  margin-right: 0.25em;
-  text-align: center;
-}
-
 .clear {
   display: table;
   clear: both;

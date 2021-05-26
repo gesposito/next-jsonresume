@@ -31,7 +31,7 @@ export function Experience({ work }) {
                     <div className="position">{item.position}</div>
                   )}
                   {item.website && (
-                    <div className="website">
+                    <div className="icon website">
                       <a href={item.website}>{item.website}</a>
                     </div>
                   )}
