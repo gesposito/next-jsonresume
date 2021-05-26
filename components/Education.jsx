@@ -1,0 +1,75 @@
+import React from "react";
+
+export function Education({ education }) {
+  return (
+    <>
+      {!!education?.length && (
+        <>
+          <section className="section">
+            <h2 className="section-title">Education</h2>
+            <section id="education">
+              {education.map((item, i) => (
+                <React.Fragment key={i}>
+                  <header>
+                    {item.institution && (
+                      <>
+                        <h3 className="institution">{item.institution}</h3>
+                      </>
+                    )}
+                    <div className="date">
+                      {item.startDate && (
+                        <>
+                          <span className="startDate">{item.Y}</span>
+                        </>
+                      )}
+                      {item.endDate ? (
+                        <>
+                          <span className="endDate">- {item.Y}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="endDate">- Present</span>
+                        </>
+                      )}
+                    </div>
+                  </header>
+                  <div className="item">
+                    {item.studyType && (
+                      <>
+                        <div className="studyType">{item.studyType}</div>
+                      </>
+                    )}
+                    {item.area && (
+                      <>
+                        <div className="area">{item.area}</div>
+                      </>
+                    )}
+                    {item.gpa && (
+                      <>
+                        <div>
+                          <span className="fa fa-graduation-cap" />
+                          <span className="gpa"> GPA: {item.gpa}</span>
+                        </div>
+                      </>
+                    )}
+                    {!!item.courses?.length && (
+                      <>
+                        <ul className="courses">
+                          {item.courses.map((item, i) => (
+                            <React.Fragment key={i}>
+                              <li>{item}</li>
+                            </React.Fragment>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </div>
+                </React.Fragment>
+              ))}
+            </section>
+          </section>
+        </>
+      )}
+    </>
+  );
+}
