@@ -7,7 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
   min-width: 1.25em;
-  margin-right: 0.25em;
+  vertical-align: middle;
 }
 .location::before {
   content: url("/icons/map-pin.svg");
@@ -58,45 +58,26 @@
   height: 5px;
 }
 
-#skills .level.beginner .bar::after {
+#skills .level.beginner .bar::after,
+#skills .level.junior .bar::after {
   background: #ef4444;
   width: 2.5em;
 }
 
-#skills .level.intermediate .bar::after {
+#skills .level.intermediate .bar::after,
+#skills .level.middle .bar::after {
   background: #fcd34d;
   width: 5em;
 }
 
-#skills .level.advanced .bar::after {
+#skills .level.advanced .bar::after,
+#skills .level.senior .bar::after {
   background: #34d399;
   width: 7.5em;
 }
 
-#skills .level.master .bar::after {
+#skills .level.master .bar::after,
+#skills .level.principal .bar::after {
   background: #059669;
   width: 10em;
-}
-
-#references .item {
-  padding-left: 1em;
-  border-left: 5px solid #eb5f51;
-}
-
-.courses li,
-.keywords li {
-  display: inline-block;
-  background: #f0f0f0;
-  font-size: 0.9em;
-  line-height: 1;
-  color: #333;
-  padding: 0.4em 0.8em;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-#interests .item,
-#languages .item {
-  border-bottom: none;
 }

@@ -3,7 +3,9 @@ export function Header({ image, name, label }) {
     <header id="header" className="mt-8">
       {image ? (
         <>
-          <img src={image} alt={name} />
+          <div className="relative">
+            <img src={image} alt={name} className="absolute right-0	w-44" />
+          </div>
           <div>
             <h1 className="name text-3xl text-gray-900 font-semibold">
               {name}

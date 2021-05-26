@@ -52,7 +52,7 @@ export default function Home({ data }) {
         <title>{name}</title>
       </Head>
 
-      <section id="resume" className="container mx-auto my-8">
+      <section id="resume" className="max-w-screen-md	container mx-auto my-8">
         <Header image={image} name={name} label={label} />
 
         <section id="basics" className="mt-8 text-sm">

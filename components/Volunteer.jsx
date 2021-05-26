@@ -7,20 +7,39 @@ export function Volunteer({ volunteer }) {
     <>
       {!!volunteer?.length && (
         <section className="section">
-          <h2 className="section-title text-xl mt-4 text-gray-400">
+          <h2 className="section-title text-xl mt-4 text-gray-500">
             Volunteer
           </h2>
           <section id="volunteer">
             {volunteer.map((item, i) => (
               <React.Fragment key={i}>
                 {item.organization && (
-                  <header>
-                    <h3 className="company text-lg mt-6 font-semibold">
+                  <header className="relative">
+                    <h3
+                      className={`company text-lg mt-6 font-semibold border-l-4 pl-4 ${
+                        [
+                          `border-purple-600`,
+                          `border-purple-500`,
+                          `border-purple-400`,
+                          `border-purple-300`,
+                          `border-purple-200`,
+                          `border-purple-100`,
+                          `border-purple-50`,
+                        ][i < 6 ? i : 6]
+                      }`}
+                    >
                       {item.organization}
                     </h3>
+                    {item.website && (
+                      <div className="icon website text-sm absolute top-0 right-0 max-w-xs overflow-ellipsis truncate">
+                        <a href={item.website} className="text-purple-600	">
+                          {item.website}
+                        </a>
+                      </div>
+                    )}
                   </header>
                 )}
-                <div className="item">
+                <div className="item pl-5">
                   {item.position && (
                     <div className="position text-lg text-gray-600 font-normal">
                       {item.position}
@@ -40,17 +59,10 @@ export function Volunteer({ volunteer }) {
                       <span className="endDate">- Present</span>
                     )}
                   </div>
-                  {item.website && (
-                    <div className="icon website text-sm">
-                      <a href={item.website} className="text-purple-600	">
-                        {item.website}
-                      </a>
-                    </div>
-                  )}
 
                   {item.summary && (
                     <div className="summary my-4">
-                      <p className="text-gray-800 text-lg mt-4 whitespace-pre-line">
+                      <p className="text-gray-800 text-lg mt-4 whitespace-pre-line text-justify	">
                         {item.summary}
                       </p>
                     </div>

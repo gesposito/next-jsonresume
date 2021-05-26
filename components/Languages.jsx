@@ -5,12 +5,12 @@ export function Languages({ languages }) {
     <>
       {!!languages?.length && (
         <section className="section">
-          <h2 className="section-title text-xl mt-4 text-gray-400">
+          <h2 className="section-title text-xl mt-4 text-gray-500">
             Languages
           </h2>
-          <section id="languages">
+          <section id="languages" className="flex pl-5">
             {languages.map((item, i) => (
-              <div className="item" key={i}>
+              <div className="item mr-6" key={i}>
                 {item.language && (
                   <div className="mt-4 language">{item.language}</div>
                 )}

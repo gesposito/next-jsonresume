@@ -11,7 +11,7 @@ export function Profiles({ profiles }) {
                 <span className="username">
                   {item.url ? (
                     <span className={`url icon ${item.network.toLowerCase()}`}>
-                      <a href={item.url} className="text-purple-600	">
+                      <a href={item.url} className="text-purple-600">
                         {item.username}
                       </a>
                     </span>
