@@ -15,19 +15,19 @@ export function Education({ education }) {
                   {item.institution && (
                     <h3 className="institution">{item.institution}</h3>
                   )}
-                  <div className="date">
-                    {item.startDate && (
-                      <span className="startDate">
-                        {format(item.startDate)}
-                      </span>
-                    )}
-                    {item.endDate ? (
-                      <span className="endDate">- {format(item.endDate)}</span>
-                    ) : (
-                      <span className="endDate">- Present</span>
-                    )}
-                  </div>
                 </header>
+                <div className="date">
+                  {item.startDate && (
+                    <span className="startDate">{format(item.startDate)} </span>
+                  )}
+                  {item.endDate ? (
+                    <span className="endDate">
+                      {item.startDate && "-"} {format(item.endDate)}
+                    </span>
+                  ) : (
+                    <span className="endDate">- Present</span>
+                  )}
+                </div>
                 <div className="item">
                   {item.studyType && (
                     <div className="studyType">{item.studyType}</div>

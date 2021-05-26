@@ -14,22 +14,20 @@ export function Volunteer({ volunteer }) {
                 {item.organization && (
                   <header>
                     <h3 className="company">{item.organization}</h3>
-                    <div className="date">
-                      {item.startDate && (
-                        <span className="startDate">
-                          {format(item.startDate)}
-                        </span>
-                      )}
-                      {item.endDate ? (
-                        <span className="endDate">
-                          - {format(item.endDate)}
-                        </span>
-                      ) : (
-                        <span className="endDate">- Present</span>
-                      )}
-                    </div>
                   </header>
                 )}
+                <div className="date">
+                  {item.startDate && (
+                    <span className="startDate">{format(item.startDate)} </span>
+                  )}
+                  {item.endDate ? (
+                    <span className="endDate">
+                      {item.startDate && "-"} {format(item.endDate)}
+                    </span>
+                  ) : (
+                    <span className="endDate">- Present</span>
+                  )}
+                </div>
                 <div className="item">
                   {item.position && (
                     <div className="position">{item.position}</div>

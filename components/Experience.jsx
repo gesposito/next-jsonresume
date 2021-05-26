@@ -18,7 +18,7 @@ export function Experience({ work }) {
                 )}
                 <div className="date">
                   {item.startDate && (
-                    <span className="startDate">{format(item.startDate)}</span>
+                    <span className="startDate">{format(item.startDate)} </span>
                   )}
                   {item.endDate ? (
                     <span className="endDate">- {format(item.endDate)}</span>
