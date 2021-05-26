@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Head from "next/head";
-
-const RESUME_URL =
-  "https://gist.githubusercontent.com/thomasdavis/c9dcfa1b37dec07fb2ee7f36d7278105/raw/42222fecd748c7b9d8c15fd84d677cebd5fdda3a/resume.json";
 
 export default function Home({ data }) {
   if (!Object.keys(data).length) {
@@ -589,7 +586,10 @@ export default function Home({ data }) {
 export async function getServerSideProps(context) {
   let data = {};
   try {
-    const url = `http://${context.req.headers.host}/api/resume`;
+    const query = context.query.url
+      ? `?url=${encodeURI(context.query.url)}`
+      : "";
+    const url = `http://${context.req.headers.host}/api/resume${query}`;
     const response = await fetch(url);
     data = await response.json();
   } catch (e) {
