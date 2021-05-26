@@ -1,127 +1,6 @@
-/*
-  Imported from
-  https://github.com/phoinixi/jsonresume-theme-spartan/blob/master/style.css
-*/
-
-/* Headers */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
-h1 {
-  font-size: 2.5rem;
-}
-h2,
-h3 {
-  font-size: 1rem;
-}
-a {
-  color: #eb5f51;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Layout */
-body {
-  background: #f2f2f2;
-}
-
-#header {
-  padding: 0 1em;
-  margin-bottom: 1em;
-}
-
-#resume > header div {
-  display: table;
-  padding-left: 0.5em;
-}
-
-#resume > header div.middle {
-  padding-top: 1.5em;
-}
-
-header img {
-  display: block;
-  width: 10em;
-  border-radius: 0.275em;
-  float: right;
-}
-
-header .name {
-  line-height: 1;
-}
-
-header .label {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #757575;
-}
-
-section:not(.section) {
-  padding: 0.5em 1rem;
-}
-
-section#references {
-  border-bottom: none;
-}
-
-section#basics {
-  background: inherit;
-  margin-bottom: 0;
-}
-
-section#skills {
-  padding-bottom: 0;
-}
-
-section#education,
-section#work,
-.main-summary section {
-  padding-bottom: 1em;
-}
-
-header::after {
-  display: table;
-  content: " ";
-  clear: both;
-}
-
-h2.section-title {
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #757575;
-  padding: 1em 1rem 0;
-  margin-bottom: 0.1275em;
-}
-
-.date {
-  font-weight: 700;
-  color: #757575;
-}
-
-.position,
-.area,
-.institution {
-  font-weight: 700;
-}
-
-#interests .item,
-#languages .item {
-  padding: 0 1em 1em 0;
-  border-bottom: none;
-}
-
 .icon::before {
   display: inline-flex;
   justify-content: center;
-  vertical-align: text-top;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -155,70 +34,14 @@ h2.section-title {
   content: url("/icons/linkedin.svg");
 }
 
-#profiles,
-#skills,
-#interests,
-#languages {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  padding-bottom: 1em;
-}
-
-#profiles,
-#location {
-  box-shadow: none;
-  padding: 0;
-}
-
-#profiles .item {
-  margin: 0;
-  padding: 0;
-  padding-right: 1em;
-  border-bottom: none;
-}
-
-#interests ul {
-  margin-top: 0.5em;
-}
-
-#publications .name {
-  font-style: italic;
-}
-
-.courses li,
-.keywords li {
-  display: inline-block;
-  background: #f0f0f0;
-  font-size: 0.9em;
-  line-height: 1;
-  color: #333;
-  padding: 0.4em 0.8em;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-#publications .date {
-  font-weight: normal;
-  color: #000;
-}
-
-#skills .item {
-  min-width: 15em;
-  padding: 0 0.5em 0.8em 0;
-  border-bottom: none;
-}
+/*
+  Imported from
+  https://github.com/phoinixi/jsonresume-theme-spartan/blob/master/style.css
+*/
 
 /* Skills chart */
 #skills .level .bar {
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
   display: block;
   width: 10em;
   height: 5px;
@@ -236,22 +59,22 @@ h2.section-title {
 }
 
 #skills .level.beginner .bar::after {
-  background: #eb5f51;
+  background: #ef4444;
   width: 2.5em;
 }
 
 #skills .level.intermediate .bar::after {
-  background: #ffdf1f;
+  background: #fcd34d;
   width: 5em;
 }
 
 #skills .level.advanced .bar::after {
-  background: #59c596;
+  background: #34d399;
   width: 7.5em;
 }
 
 #skills .level.master .bar::after {
-  background: #5cb85c;
+  background: #059669;
   width: 10em;
 }
 
@@ -260,160 +83,20 @@ h2.section-title {
   border-left: 5px solid #eb5f51;
 }
 
-/* Social Media Brand Colors */
-.google-plus {
-  color: #dd4b39;
+.courses li,
+.keywords li {
+  display: inline-block;
+  background: #f0f0f0;
+  font-size: 0.9em;
+  line-height: 1;
+  color: #333;
+  padding: 0.4em 0.8em;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 3px;
 }
 
-.tumblr {
-  color: #32506d;
-}
-
-.foursquare {
-  color: #0072b1;
-}
-
-.facebook {
-  color: #3b5998;
-}
-
-.linkedin {
-  color: #007bb6;
-}
-
-.pinterest {
-  color: #cb2027;
-}
-
-.dribbble {
-  color: #ea4c89;
-}
-
-.instagram {
-  color: #517fa4;
-}
-
-.twitter {
-  color: #00aced;
-}
-
-.soundcloud {
-  color: #ff3a00;
-}
-
-.wordpress {
-  color: #21759b;
-}
-
-.youtube {
-  color: #bb0000;
-}
-
-.github {
-  color: #171515;
-}
-
-.stack-overflow {
-  color: #828386;
-  position: relative;
-}
-
-.flickr {
-  color: #ff0084;
-}
-
-.stack-overflow::after {
-  position: absolute;
-  left: 0;
-  content: "\f16c";
-  color: #f68a1f;
-  overflow: hidden;
-  height: 40%;
-}
-
-/******************
-*		HELPER CLASSES
-******************/
-.clear {
-  display: table;
-  clear: both;
-}
-
-/****************
-*		TABLET
-****************/
-@media screen and (min-width: 602px) {
-  section > header > h3 {
-    float: left;
-  }
-  section > header > .date {
-    float: right;
-    line-height: 1.3;
-  }
-}
-
-/****************
-*		LAPTOP
-****************/
-@media screen and (min-width: 1025px) {
-  .section {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-bottom: 1px solid #eee;
-  }
-
-  .section:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-
-  section > header {
-    line-height: 1;
-    padding-bottom: 1em;
-  }
-
-  h2.section-title {
-    line-height: 1.1;
-    padding-top: 0;
-  }
-
-  section p {
-    margin: 0;
-  }
-
-  section#basics {
-    width: auto;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-bottom: 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
-
-  #profiles .item {
-    padding-bottom: 1em;
-  }
-
-  div {
-    padding: 0;
-  }
-
-  #skills .item {
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  div.item {
-    margin-top: 0;
-    border-bottom: 1px solid #eee;
-  }
+#interests .item,
+#languages .item {
+  border-bottom: none;
 }

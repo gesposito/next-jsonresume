@@ -5,7 +5,9 @@ export function References({ references }) {
     <>
       {!!references?.length && (
         <section className="section">
-          <h2 className="section-title">References</h2>
+          <h2 className="section-title text-xl mt-4 text-gray-400">
+            References
+          </h2>
           <section id="references">
             {references.map((item, i) => (
               <React.Fragment key={i}>
@@ -15,7 +17,11 @@ export function References({ references }) {
                       “ {item.reference} ”
                     </blockquote>
                   )}
-                  {item.name && <div className="name">{item.name}</div>}
+                  {item.name && (
+                    <div className="name text-xl mt-6 font-semibold">
+                      {item.name}
+                    </div>
+                  )}
                 </div>
               </React.Fragment>
             ))}

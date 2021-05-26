@@ -52,10 +52,10 @@ export default function Home({ data }) {
         <title>{name}</title>
       </Head>
 
-      <section id="resume" className="container mx-auto">
+      <section id="resume" className="container mx-auto my-8">
         <Header image={image} name={name} label={label} />
 
-        <section id="basics">
+        <section id="basics" className="mt-8 text-sm">
           <Location location={location} />
 
           <Contact website={website} email={email} phone={phone} />

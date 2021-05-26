@@ -4,7 +4,7 @@ export function Profiles({ profiles }) {
   return (
     <>
       {!!profiles?.length && (
-        <div id="profiles">
+        <div id="profiles" className="flex justify-start">
           {profiles.map((item, i) => (
             <React.Fragment key={i}>
               <div className="item">
@@ -14,7 +14,9 @@ export function Profiles({ profiles }) {
                       <span
                         className={`url icon ${item.network.toLowerCase()}`}
                       >
-                        <a href={item.url}>{item.username}</a>
+                        <a href={item.url} className="text-purple-600	">
+                          {item.username}
+                        </a>
                       </span>
                     ) : (
                       <> {item.username}</>

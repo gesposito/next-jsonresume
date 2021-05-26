@@ -6,9 +6,11 @@ export function Summary({ summary }) {
       {summary && (
         <React.Fragment>
           <section className="section main-summary">
-            <h2 className="section-title">About</h2>
+            <h2 className="section-title text-xl mt-4 text-gray-400">About</h2>
             <section>
-              <p>{summary}</p>
+              <p className="text-gray-800 text-lg mt-4 whitespace-pre-line">
+                {summary}
+              </p>
             </section>
           </section>
         </React.Fragment>

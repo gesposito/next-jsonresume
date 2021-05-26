@@ -7,43 +7,56 @@ export function Volunteer({ volunteer }) {
     <>
       {!!volunteer?.length && (
         <section className="section">
-          <h2 className="section-title">Volunteer</h2>
+          <h2 className="section-title text-xl mt-4 text-gray-400">
+            Volunteer
+          </h2>
           <section id="volunteer">
             {volunteer.map((item, i) => (
               <React.Fragment key={i}>
                 {item.organization && (
                   <header>
-                    <h3 className="company">{item.organization}</h3>
+                    <h3 className="company text-lg mt-6 font-semibold">
+                      {item.organization}
+                    </h3>
                   </header>
                 )}
-                <div className="date">
-                  {item.startDate && (
-                    <span className="startDate">{format(item.startDate)} </span>
-                  )}
-                  {item.endDate ? (
-                    <span className="endDate">
-                      {item.startDate && "-"} {format(item.endDate)}
-                    </span>
-                  ) : (
-                    <span className="endDate">- Present</span>
-                  )}
-                </div>
                 <div className="item">
                   {item.position && (
-                    <div className="position">{item.position}</div>
-                  )}
-                  {item.website && (
-                    <div className="icon website">
-                      <a href={item.website}>{item.website}</a>
+                    <div className="position text-lg text-gray-600 font-normal">
+                      {item.position}
                     </div>
                   )}
+                  <div className="date text-gray-600 text-sm">
+                    {item.startDate && (
+                      <span className="startDate">
+                        {format(item.startDate)}{" "}
+                      </span>
+                    )}
+                    {item.endDate ? (
+                      <span className="endDate">
+                        {item.startDate && "-"} {format(item.endDate)}
+                      </span>
+                    ) : (
+                      <span className="endDate">- Present</span>
+                    )}
+                  </div>
+                  {item.website && (
+                    <div className="icon website text-sm">
+                      <a href={item.website} className="text-purple-600	">
+                        {item.website}
+                      </a>
+                    </div>
+                  )}
+
                   {item.summary && (
-                    <div className="summary">
-                      <p>{item.summary}</p>
+                    <div className="summary my-4">
+                      <p className="text-gray-800 text-lg mt-4 whitespace-pre-line">
+                        {item.summary}
+                      </p>
                     </div>
                   )}
                   {!!item.highlights?.length && (
-                    <ul className="highlights">
+                    <ul className="highlights font-mono text-sm text-gray-600">
                       {item.highlights.map((item, i) => (
                         <React.Fragment key={i}>
                           <li>{item}</li>
