@@ -10,20 +10,18 @@ export function References({ references }) {
           </h2>
           <section id="references">
             {references.map((item, i) => (
-              <React.Fragment key={i}>
-                <div className="item">
-                  {item.reference && (
-                    <blockquote className="reference">
-                      “ {item.reference} ”
-                    </blockquote>
-                  )}
-                  {item.name && (
-                    <div className="name text-xl mt-6 font-semibold">
-                      {item.name}
-                    </div>
-                  )}
-                </div>
-              </React.Fragment>
+              <div className="item" key={i}>
+                {item.reference && (
+                  <blockquote className="reference">
+                    “ {item.reference} ”
+                  </blockquote>
+                )}
+                {item.name && (
+                  <div className="name text-xl mt-6 font-semibold">
+                    {item.name}
+                  </div>
+                )}
+              </div>
             ))}
           </section>
         </section>

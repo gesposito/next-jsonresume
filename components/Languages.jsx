@@ -10,18 +10,16 @@ export function Languages({ languages }) {
           </h2>
           <section id="languages">
             {languages.map((item, i) => (
-              <React.Fragment key={i}>
-                <div className="item">
-                  {item.language && (
-                    <div className="mt-4 language">{item.language}</div>
-                  )}
-                  {item.fluency && (
-                    <div className="fluency">
-                      <em>{item.fluency}</em>
-                    </div>
-                  )}
-                </div>
-              </React.Fragment>
+              <div className="item" key={i}>
+                {item.language && (
+                  <div className="mt-4 language">{item.language}</div>
+                )}
+                {item.fluency && (
+                  <div className="fluency">
+                    <em>{item.fluency}</em>
+                  </div>
+                )}
+              </div>
             ))}
           </section>
         </section>

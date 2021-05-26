@@ -58,9 +58,7 @@ export function Volunteer({ volunteer }) {
                   {!!item.highlights?.length && (
                     <ul className="highlights font-mono text-sm text-gray-600">
                       {item.highlights.map((item, i) => (
-                        <React.Fragment key={i}>
-                          <li>{item}</li>
-                        </React.Fragment>
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
                   )}

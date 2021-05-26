@@ -16,9 +16,7 @@ export function Interests({ interests }) {
                   {!!item.keywords?.length && (
                     <ul className="keywords">
                       {item.keywords.map((item, i) => (
-                        <React.Fragment key={i}>
-                          <li>{item}</li>
-                        </React.Fragment>
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
                   )}

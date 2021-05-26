@@ -45,9 +45,7 @@ export function Education({ education }) {
                   {!!item.courses?.length && (
                     <ul className="courses">
                       {item.courses.map((item, i) => (
-                        <React.Fragment key={i}>
-                          <li>{item}</li>
-                        </React.Fragment>
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
                   )}
