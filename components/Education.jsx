@@ -1,5 +1,7 @@
 import React from "react";
 
+import { format } from "../utils/dateTimeFormat";
+
 export function Education({ education }) {
   return (
     <>
@@ -15,10 +17,12 @@ export function Education({ education }) {
                   )}
                   <div className="date">
                     {item.startDate && (
-                      <span className="startDate">{item.Y}</span>
+                      <span className="startDate">
+                        {format(item.startDate)}
+                      </span>
                     )}
                     {item.endDate ? (
-                      <span className="endDate">- {item.Y}</span>
+                      <span className="endDate">- {format(item.endDate)}</span>
                     ) : (
                       <span className="endDate">- Present</span>
                     )}

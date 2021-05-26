@@ -1,5 +1,7 @@
 import React from "react";
 
+import { format } from "../utils/dateTimeFormat";
+
 export function Experience({ work }) {
   return (
     <>
@@ -16,10 +18,10 @@ export function Experience({ work }) {
                 )}
                 <div className="date">
                   {item.startDate && (
-                    <span className="startDate">{item.MY}</span>
+                    <span className="startDate">{format(item.startDate)}</span>
                   )}
                   {item.endDate ? (
-                    <span className="endDate">- {item.MY}</span>
+                    <span className="endDate">- {format(item.endDate)}</span>
                   ) : (
                     <span className="endDate">- Present</span>
                   )}

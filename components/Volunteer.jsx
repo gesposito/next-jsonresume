@@ -1,5 +1,7 @@
 import React from "react";
 
+import { format } from "../utils/dateTimeFormat";
+
 export function Volunteer({ volunteer }) {
   return (
     <>
@@ -14,10 +16,14 @@ export function Volunteer({ volunteer }) {
                     <h3 className="company">{item.organization}</h3>
                     <div className="date">
                       {item.startDate && (
-                        <span className="startDate">{item.MY}</span>
+                        <span className="startDate">
+                          {format(item.startDate)}
+                        </span>
                       )}
                       {item.endDate ? (
-                        <span className="endDate">- {item.MY}</span>
+                        <span className="endDate">
+                          - {format(item.endDate)}
+                        </span>
                       ) : (
                         <span className="endDate">- Present</span>
                       )}
