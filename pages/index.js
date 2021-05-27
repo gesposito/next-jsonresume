@@ -49,7 +49,9 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>{name}</title>
+        <title>
+          {name}, {label}
+        </title>
       </Head>
 
       <section id="resume" className="max-w-screen-md	container mx-auto my-8">
