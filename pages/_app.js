@@ -13,11 +13,6 @@ function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=no"
         />
-        <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,700,400italic"
-          rel="stylesheet"
-          type="text/css"
-        />
       </Head>
       <Component {...pageProps} />
     </>
